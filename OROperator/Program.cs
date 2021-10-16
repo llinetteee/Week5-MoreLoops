@@ -1,13 +1,11 @@
 ﻿using System;
 
-namespace MoreLoops
+namespace OROperator
 {
     class Program
     {
         static void Main(string[] args)
         {
-
-
             Console.WriteLine("Sisesta kasutajatunnus: ");
 
             string userName = Console.ReadLine();
@@ -16,15 +14,18 @@ namespace MoreLoops
 
             string userPassword = Console.ReadLine();
 
-            if(userName == "admin" && userPassword == "admin1234")
-            {
+            if (userName != "admin" || userPassword != "admin1234")
 
-                Console.WriteLine("Tere tulemast!");
+            
+
+            {
+              
+                Console.WriteLine($"Vale kasutajatunnus või salasõna. Proovi uuesti, jäänud on katset");
             }
             else
             {
 
-                Console.WriteLine("Vale kasutajatunnus või salasõna. Proovi uuesti.");
+                Console.WriteLine("Tere tulemast!");
 
             }
         }
